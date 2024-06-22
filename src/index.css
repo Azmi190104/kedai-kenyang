@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+}
+
+.contentMain {
+    overflow: scroll;
+    position: absolute;
+}
+
+
+.categoryCard:hover,
+.categoryCard.active {
+    background-color: #53b1bc;
+    transition: .3s;
+    color: white;
+}
+
+
+.categoryCard:hover > img{
+    filter: invert(100%);
+    transition: .5s;
+}
+
+.categoryCard.active img {
+    filter: invert(100%);
+}
+
+
+.contentProduct {
+    height: 90%;
+    scrollbar-width: none;
+}
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0);
+    transform: scale(0);
+}
+
+.overlay:target {
+    width: 80%;
+    height: 100%;
+    transition: .3s;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale(1);
+    background-color: rgba(0, 0, 0, 0.399);
+    z-index: 999;
+}
+
+
+.overlay a {
+    position: relative;
+    top: 200px;
+    left: 20px;
+}
+
+
+
+table {
+    font-size: 10px;
+}
+
