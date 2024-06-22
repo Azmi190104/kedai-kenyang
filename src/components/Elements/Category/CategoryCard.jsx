@@ -33,7 +33,6 @@ export default function CategoryCard(props){
             })
             item.classList.add('active');
         })
-        item
     })
 
     return(
